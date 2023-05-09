@@ -24,7 +24,7 @@ class VerifyToken
             JWTAuth::decode($token);
         } catch (\Throwable $th) {
             //throw $th;
-            return redirect('/logout');
+            return redirect()->route('/');
         }
         return $next($request);
     }
