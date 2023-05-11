@@ -23,7 +23,7 @@ class VerifyToken
             $token = new Token($cookie);
             JWTAuth::decode($token);
         } catch (\Throwable $th) {
-            //throw $th;
+            // throw $th;
             return redirect()->route('/');
         }
         return $next($request);

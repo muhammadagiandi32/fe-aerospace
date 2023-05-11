@@ -47,8 +47,8 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                            <span style="background: linear-gradient(to right, #12CE5D 0%, #FFD80C 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
-                                <h3 id="kt_landing_hero_text">Rusmajaya</h3>
+                            <span style="background:  #240cff 100%;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+                                <h3 id="kt_landing_hero_text">AEROSPACE</h3>
                             </span>
 
                         </div>
@@ -82,7 +82,7 @@
 
                         <div class="d-flex justify-content-between align-items-center">
 
-                            <a href="{{route('password.request')}}" class="text-body">Lupa password?</a>
+                            {{-- <a href="{{route('password.request')}}" class="text-body">Lupa password?</a> --}}
                         </div>
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
@@ -95,7 +95,7 @@
         <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
             <!-- Copyright -->
             <div class="text-white mb-3 mb-md-0">
-                Copyright © 2022. All rights reserved.
+                Copyright © {{ date('Y') }}. All rights reserved.
             </div>
             <!-- Copyright -->
 
