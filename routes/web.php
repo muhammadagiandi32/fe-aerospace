@@ -96,5 +96,5 @@ Route::post('/post-form', function (Request $request) {
         'accept' => 'application/json',
         // 'Authorization' => 'Bearer ' . request()->cookie('X-AUTH-TOKEN')
     ])->withBody(json_encode($request), 'application/json')->post(base_url::url('form-kepuasan'));
-    return $response->body();
+    return $response;
 })->name('post-form');
