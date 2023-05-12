@@ -8,8 +8,8 @@
     <!-- <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"> -->
     <!-- <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
-                                                                                                integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
-                                                                                                crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+                                                                                                                                                integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+                                                                                                                                                crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <style>
         .ui-autocomplete {
@@ -159,7 +159,9 @@
                             <div class="col-6 col-md-6 text-center">
                                 <img src="https://member-dev.aerospace.co.id/assets/img/foto/21.jpg"
                                     style="height: 100px;" class="img-fluid mb-3" alt="User Profile">
-                                <div style="font-size:14px; color:#000"><strong>dearcindyy</strong></div>
+                                <div style="font-size:14px; color:#000">
+                                    <strong>{{ $data[0]['children'][0]['children'][0]['children'][0]['data']['Username'] }}</strong>
+                                </div>
                                 <div style="font-size:14px; color:#172fe1"><strong>Spaceman</strong></div>
                                 <div style="padding-bottom:5px" class="my-2">
                                     <small class="badge badge-danger"><i class="fa fa-user"></i> 19</small>
@@ -171,15 +173,28 @@
                                 </div>
                                 <a class="btn btn-dark btn-flat margin"
                                     href="https://member-dev.aerospace.co.id/user/network_diagram/QVMwMDAwMTg3fHNlanV0YXdlYi5jb20="
-                                    data-bs-original-title="" title=""><i class="fa fa-user"></i> cindy yuvia</a>
+                                    data-bs-original-title="" title=""><i
+                                        class="fa fa-user"></i>{{ $data[0]['children'][0]['children'][0]['children'][0]['data']['Username'] }}</a>
                             </div>
                             <div class="col-6 col-md-6 text-center">
-                                <img src="https://member-dev.aerospace.co.id/assets/img/foto/kosong.jpg"
+                                <img src="https://member-dev.aerospace.co.id/assets/img/foto/21.jpg"
                                     style="height: 100px;" class="img-fluid mb-3" alt="User Profile">
-                                <br>
-                                <a class="btn btn-primary my-2"
-                                    href="https://member-dev.aerospace.co.id/user/add/QVMwMDAwMDI3fGthbmFufHNlanV0YXdlYi5jb20="
-                                    data-bs-original-title="" title="">Add</a>
+                                <div style="font-size:14px; color:#000">
+                                    <strong>{{ $data[0]['children'][0]['children'][0]['children'][1]['data']['Username'] }}</strong>
+                                </div>
+                                <div style="font-size:14px; color:#172fe1"><strong>Spaceman</strong></div>
+                                <div style="padding-bottom:5px" class="my-2">
+                                    <small class="badge badge-danger"><i class="fa fa-user"></i> 19</small>
+                                    <small class="badge badge-primary"><i class="fa fa-user"></i> 57</small>
+                                </div>
+                                <div style="padding-bottom:10px">
+                                    <small class="badge badge-dark"><i class="fa fa-user"></i> 0</small>
+                                    <small class="badge badge-dark"><i class="fa fa-user"></i> 90</small>
+                                </div>
+                                <a class="btn btn-dark btn-flat margin"
+                                    href="https://member-dev.aerospace.co.id/user/network_diagram/QVMwMDAwMTg3fHNlanV0YXdlYi5jb20="
+                                    data-bs-original-title="" title=""><i
+                                        class="fa fa-user"></i>{{ $data[0]['children'][0]['children'][0]['children'][1]['data']['Username'] }}</a>
                             </div>
                         </div>
                     </div>

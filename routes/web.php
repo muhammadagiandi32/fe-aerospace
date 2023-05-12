@@ -86,3 +86,15 @@ Route::get('/test', function () {
     $promise = Http::get(base_url::url('test'));
     return $promise[0]['children'][0]['data']['Username'];
 });
+
+Route::get('/form', function () {
+    return view('pages.form.form-kepuasan');
+});
+Route::post('/post-form', function (Request $request) {
+    $response = Http::withHeaders([
+        'X-API-Key' => 'qV32ZZ90fGaUqF0p6CcmyU452tL7H4LCjzggxmbsBap11VLY0r6EzMb6k0p8NOGM',
+        'accept' => 'application/json',
+        // 'Authorization' => 'Bearer ' . request()->cookie('X-AUTH-TOKEN')
+    ])->withBody(json_encode($request), 'application/json')->post(base_url::url('form-kepuasan'));
+    return $response->body();
+})->name('post-form');
