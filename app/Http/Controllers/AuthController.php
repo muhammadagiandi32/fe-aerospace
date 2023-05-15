@@ -9,14 +9,20 @@ class AuthController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+
+    public function __construct()
+    {
+        $cookie = request()->cookie('X-AUTH-TOKEN');
+    }
     public function index()
     {
         //
         return view('auth.login');
     }
 
-    public function me(){
-        
+    public function me()
+    {
     }
     /**
      * Show the form for creating a new resource.

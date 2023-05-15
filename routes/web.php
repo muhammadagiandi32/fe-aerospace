@@ -3,6 +3,7 @@
 use App\Helpers\base_url;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\member\AddMemberController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -98,3 +99,8 @@ Route::post('/post-form', function (Request $request) {
     ])->withBody(json_encode($request), 'application/json')->post(base_url::url('form-kepuasan'));
     return $response;
 })->name('post-form');
+
+// Route::get('/add-member', [AddMemberController::class, 'index'])->name('add-new-member');
+Route::name('member.')->group(function () {
+    Route::get('/add-member', [AddMemberController::class, 'index'])->name('add-new-member');
+});
